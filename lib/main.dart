@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app_screens/base_screen.dart';
+import 'app_screens/splash_screen.dart';
 
 void main() {
   runApp(Homepage());
@@ -12,10 +13,9 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Ecommerce App",
-      home: Welcomepage(),
+      home: SplashScreen(),
       theme: ThemeData(primaryColor: Colors.black, accentColor: Colors.pink),
       debugShowCheckedModeBanner: false,
-
     );
   }
 }
