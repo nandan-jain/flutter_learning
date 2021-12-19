@@ -1,5 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/app_screens/home_screen.dart';
+import 'package:hello_world/base_widgets/main_drawer.dart';
+
+class Welcomepage extends StatelessWidget {
+  const Welcomepage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            child: Text('Welcome'),
+          ),
+          Container(
+              child: ElevatedButton(
+            child: Text('Get started'),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomeState()));
+            },
+            style: ElevatedButton.styleFrom(primary: Colors.orange),
+          )),
+        ],
+      ),
+    ));
+  }
+}
 
 class HomeState extends StatefulWidget {
   const HomeState({Key? key}) : super(key: key);
@@ -20,15 +49,11 @@ class _HomeStateState extends State<HomeState> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
-      body: Center(
-        child: _pagesData[_curStep],
-        // child: _bodyWidget(),
+      appBar: AppBar(
+        title: Text('app bar'),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   child: Icon(Icons.airline_seat_recline_normal),
-      //   onPressed: _resetCount,
-      // ),
+      drawer: MainDrawer(),
+      body: _pagesData[_curStep],
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

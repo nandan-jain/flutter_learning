@@ -12,7 +12,7 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Ecommerce App",
-      home: HomeState(),
+      home: Welcomepage(),
       theme: ThemeData(primaryColor: Colors.black, accentColor: Colors.pink),
       debugShowCheckedModeBanner: false,
 
