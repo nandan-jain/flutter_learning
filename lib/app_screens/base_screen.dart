@@ -10,9 +10,10 @@ class Welcomepage extends StatelessWidget {
     return Scaffold(
         body: Container(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Container(
+            margin: EdgeInsets.all(170),
             child: Text('Welcome'),
           ),
           Container(
