@@ -14,7 +14,7 @@ class Homepage extends StatelessWidget {
     return MaterialApp(
       title: "Ecommerce App",
       home: SplashScreen(),
-      theme: ThemeData(primaryColor: Colors.black, accentColor: Colors.pink),
+      theme: ThemeData(primaryColor: Colors.black, accentColor: Colors.orange),
       debugShowCheckedModeBanner: false,
     );
   }
