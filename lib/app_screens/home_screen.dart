@@ -5,29 +5,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home page'),
-      ),
-      body: Center(
-        child: Text('Home page'),
-      ),
-    );
-  }
-}
-
-class FavouritePage extends StatelessWidget {
-  const FavouritePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('favourite page'),
-      ),
-      body: Center(
-        child: Text('favourite page'),
-      ),
+    return Center(
+      child: Text('Home page'),
     );
   }
 }
@@ -37,13 +16,19 @@ class NotificationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Notification page'),
-      ),
-      body: Center(
-        child: Text('Notification page'),
-      ),
+    return Center(
+      child: Text('notification page'),
+    );
+  }
+}
+
+class FavouritePage extends StatelessWidget {
+  const FavouritePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text('favourite page'),
     );
   }
 }
@@ -53,13 +38,23 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Center(
+      child: Text('profile page'),
+    );
+  }
+}
+
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile page'),
+        title: Text('Settings'),
+        // leading: Icon(Icons.settings_outlined),
       ),
-      body: Center(
-        child: Text('Profile page'),
-      ),
+      body: Center(child: Text('settings PAge'),),
     );
   }
 }
