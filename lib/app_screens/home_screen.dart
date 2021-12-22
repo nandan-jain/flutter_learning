@@ -58,7 +58,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Products();
+    return Center(
+      child: Text('Home page'),
+    );
   }
 }
 
