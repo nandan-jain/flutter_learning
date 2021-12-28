@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/home_page_comp/posts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -58,9 +59,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Home page'),
-    );
+    return Posts();
   }
 }
 
