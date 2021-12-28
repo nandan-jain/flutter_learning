@@ -1,17 +1,45 @@
 import 'package:flutter/material.dart';
 
+class CatgoryCircle extends StatelessWidget {
+  const CatgoryCircle({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: EdgeInsets.all(4),
+        child: Container(
+          height: 100,
+          width: 100,
+          decoration: BoxDecoration(
+              shape: BoxShape.circle, color: Colors.white70),
+        ));
+  }
+}
+
 class Categories extends StatelessWidget {
-  const Categories({Key? key}) : super(key: key);
+  final String sectionLabel;
+  final List categories = [
+    CatgoryCircle(),
+    CatgoryCircle(),
+    CatgoryCircle(),
+    CatgoryCircle(),
+    CatgoryCircle()
+  ];
+  Categories({required this.sectionLabel});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(vertical: 10),
         child: Container(
-          child: Text('categories section'),
-          height: 125,
-          color: Colors.black12,
-        ));
+            height: 125,
+            color: Colors.black12,
+            child: ListView.builder(
+                itemCount: categories.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return categories[index];
+                })));
   }
 }
 
@@ -46,13 +74,26 @@ class MostPopular extends StatelessWidget {
 }
 
 class Posts extends StatelessWidget {
-  const Posts({Key? key}) : super(key: key);
+  Posts({Key? key}) : super(key: key);
+
+  final List _feed = [
+    Categories(
+      sectionLabel: 'Categories',
+    ),
+    NewCollection(),
+    MostPopular(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [       
-           Categories(),NewCollection(), MostPopular(),
+    return Column(
+      children: [
+        Expanded(
+            child: ListView.builder(
+                itemCount: _feed.length,
+                itemBuilder: (context, index) {
+                  return _feed[index];
+                }))
       ],
     );
   }
