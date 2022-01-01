@@ -5,24 +5,37 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Stack(
-        children: <Widget>[
-          Container(
-              height: 350,
-              width: 200,
-              color: Colors.deepOrangeAccent,
-              alignment: Alignment.center,
-              child: Image.network(
-                  'https://media.gq.com/photos/616f1e50af7badb1a03350cd/master/w_1280%2Cc_limit/Landing-Leathers-A-2-bomber-jacket.jpg')),
-          // Container(
-          //   height: 50,
-          //   width: 50,
-          //   color: Colors.indigoAccent,
-          // )
-        ],
-      ),
+    var _size = MediaQuery.of(context).size;
+    var _homeimage =
+        'https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15824634/2021/10/17/3c3fe8a3-ed1d-4903-9f50-a550384c5b8e1634474021813WWomenBlueThreadWorkKurta1.jpg';
+
+    return Stack(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            width: _size.width * 0.5,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                  image: NetworkImage(_homeimage), fit: BoxFit.cover),
+            ),
+          ),
+        ),
+        Positioned(
+          top: 20,
+          right: 17,
+          child: Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle, color: Colors.white.withOpacity(0.7)),
+              child: Icon(
+                Icons.favorite_outline,
+                size: 28,
+              )),
+        )
+      ],
     );
   }
 }

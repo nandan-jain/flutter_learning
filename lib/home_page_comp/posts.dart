@@ -61,7 +61,7 @@ class Categories extends StatelessWidget {
 
 class NewCollection extends StatelessWidget {
   NewCollection({Key? key}) : super(key: key);
-  final List products = ['1','2','3'];
+  final List products = ['1', '2', '3'];
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,10 @@ class NewCollection extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 10),
         child: Column(
           children: [
-            Text('data',style: TextStyle(backgroundColor: Colors.lightBlue),),
+            Text(
+              'New Collection',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
             Container(
               child: ListView.builder(
                   itemCount: products.length,
