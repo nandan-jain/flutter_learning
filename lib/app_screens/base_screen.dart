@@ -29,14 +29,9 @@ class Welcomepage extends StatelessWidget {
   }
 }
 
-class HomeState extends StatefulWidget {
+class HomeState extends StatelessWidget {
   const HomeState({Key? key}) : super(key: key);
 
-  @override
-  _HomeStateState createState() => _HomeStateState();
-}
-
-class _HomeStateState extends State<HomeState> {
   @override
   Widget build(BuildContext context) {
     return TabLayout();
