@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/home_page_comp/product_card.dart';
 
 class CatgoryCircle extends StatelessWidget {
   final String categoryName;
@@ -59,16 +60,26 @@ class Categories extends StatelessWidget {
 }
 
 class NewCollection extends StatelessWidget {
-  const NewCollection({Key? key}) : super(key: key);
+  NewCollection({Key? key}) : super(key: key);
+  final List products = ['1','2','3'];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(vertical: 10),
-        child: Container(
-          child: Text('NewCollection section'),
-          height: 400,
-          color: Colors.black12,
+        child: Column(
+          children: [
+            Text('data',style: TextStyle(backgroundColor: Colors.lightBlue),),
+            Container(
+              child: ListView.builder(
+                  itemCount: products.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return ProductCard();
+                  }),
+              height: 320,
+            ),
+          ],
         ));
   }
 }
