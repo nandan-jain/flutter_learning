@@ -11,7 +11,14 @@ class TabLayout extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('search'),
+            actions: <Widget>[
+              IconButton(
+                  onPressed: () {}, icon: Icon(Icons.search_outlined)),
+              IconButton(
+                  onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
+              IconButton(
+                  onPressed: () {}, icon: Icon(Icons.shopping_bag_outlined))
+            ],
           ),
           drawer: MainDrawer(),
           body: TabBarView(
@@ -24,9 +31,7 @@ class TabLayout extends StatelessWidget {
           ),
           bottomNavigationBar: TabBar(
             tabs: [
-              Tab(
-                icon: Icon(Icons.home_outlined)
-              ),
+              Tab(icon: Icon(Icons.home_outlined)),
               Tab(
                 icon: Icon(Icons.favorite_outline),
               ),
@@ -42,7 +47,6 @@ class TabLayout extends StatelessWidget {
             indicatorSize: TabBarIndicatorSize.label,
             // indicatorPadding: EdgeInsets.all(5.0),
             indicatorColor: Colors.orange,
-            
           ),
           //backgroundColor: Colors.grey[850],
         ));
