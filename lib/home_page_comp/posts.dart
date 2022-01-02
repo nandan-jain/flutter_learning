@@ -1,77 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/home_page_comp/landing_feed.dart';
 
-class CatgoryCircle extends StatelessWidget {
-  final String categoryName;
-  final String imageUrl;
+import 'package:hello_world/json/most_popular_json.dart';
+import 'package:hello_world/json/new_collection_json.dart';
 
-  CatgoryCircle({required this.categoryName, required this.imageUrl});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.all(5),
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(4),
-              child: Container(
-                height: 90,
-                width: 90,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(image: AssetImage(imageUrl))),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 8),
-              child: Text(categoryName),
-            )
-          ],
-        ));
-  }
-}
-
-class Categories extends StatelessWidget {
-  final String sectionLabel;
-  final List categories = [
-    CatgoryCircle(categoryName: 'Men', imageUrl: 'images/men.png'),
-    CatgoryCircle(categoryName: 'Women', imageUrl: 'images/women.png'),
-    CatgoryCircle(categoryName: 'Men', imageUrl: 'images/men.png'),
-    CatgoryCircle(categoryName: 'Women', imageUrl: 'images/women.png'),
-    CatgoryCircle(categoryName: 'Men', imageUrl: 'images/men.png'),
-    CatgoryCircle(categoryName: 'Women', imageUrl: 'images/women.png'),
-  ];
-  Categories({required this.sectionLabel});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.symmetric(vertical: 10),
-        child: Container(
-            height: 150,
-            child: ListView.builder(
-                itemCount: categories.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return categories[index];
-                })));
-  }
-}
-
-class NewCollection extends StatelessWidget {
-  const NewCollection({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.symmetric(vertical: 10),
-        child: Container(
-          child: Text('NewCollection section'),
-          height: 400,
-          color: Colors.black12,
-        ));
-  }
-}
+import 'categories.dart';
 
 class MostPopular extends StatelessWidget {
   const MostPopular({Key? key}) : super(key: key);
@@ -92,11 +25,15 @@ class Posts extends StatelessWidget {
   Posts({Key? key}) : super(key: key);
 
   final List _feed = [
-    Categories(
-      sectionLabel: 'Categories',
+    Categories(),
+    LandingFeed(
+      sectionLabel: 'New Collection',
+      product: new_collection_product_list,
     ),
-    NewCollection(),
-    MostPopular(),
+    LandingFeed(
+      sectionLabel: 'Most Popular',
+      product: most_popular_product_list,
+    ),
   ];
 
   @override
