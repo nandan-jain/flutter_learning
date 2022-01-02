@@ -11,9 +11,10 @@ class TabLayout extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
             actions: <Widget>[
-              IconButton(
-                  onPressed: () {}, icon: Icon(Icons.search_outlined)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.search_outlined)),
               IconButton(
                   onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
               IconButton(
