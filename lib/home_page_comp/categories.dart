@@ -24,7 +24,7 @@ class CatgoryCircle extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(top: 8),
-              child: Text(categoryName),
+              child: Text(categoryName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
             )
           ],
         ));
