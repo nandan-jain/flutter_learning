@@ -9,11 +9,11 @@ class CatgoryCircle extends StatelessWidget {
   Widget build(BuildContext context) {
     var _size = MediaQuery.of(context).size;
     return Padding(
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.all(_size.height * 0.005),
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(4),
+              padding: EdgeInsets.all(_size.height * 0.005),
               child: Container(
                 height: _size.height * 0.12,
                 width: _size.width * 0.25,
@@ -23,7 +23,7 @@ class CatgoryCircle extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 8),
+              padding: EdgeInsets.only(top: _size.height * 0.009),
               child: Text(categoryName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
             )
           ],
@@ -46,9 +46,9 @@ class Categories extends StatelessWidget {
     var _size = MediaQuery.of(context).size;
 
     return Padding(
-        padding: EdgeInsets.symmetric(vertical: 10),
+        padding: EdgeInsets.symmetric(vertical: _size.height * 0.01 ),
         child: Container(
-            height: _size.height * 0.17,
+            height: _size.height * 0.18,
             child: ListView.builder(
                 itemCount: categories.length,
                 scrollDirection: Axis.horizontal,
