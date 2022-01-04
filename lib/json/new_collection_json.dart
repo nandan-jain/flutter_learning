@@ -1,6 +1,6 @@
 List<Map<String, dynamic>> new_collection_product_list = [
   {
-    'title': 'Grey Solid Hooded Bomber Jacket',
+    'title': 'Grey Hooded Bomber Jacket',
     'price': 25,
     'rating': 4.4,
     'img_url':
@@ -14,7 +14,7 @@ List<Map<String, dynamic>> new_collection_product_list = [
         'https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13407470/2021/2/2/22b29a46-1632-4f49-a06a-e63cf4793d781612248669103-Green-Bomber-Jacket-Kalidar-Skirt-Set-2821612248666271-1.jpg'
   },
   {
-    'title': 'Black&Grey Colourblocked Sweatshirt',
+    'title': 'Colourblocked Sweatshirt',
     'price': 35,
     'rating': 4.3,
     'img_url':

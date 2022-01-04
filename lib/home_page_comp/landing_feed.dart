@@ -48,7 +48,7 @@ class LandingFeed extends StatelessWidget {
                       productDetail: product[index],
                     );
                   }),
-              height: _size.height * 0.41,
+              height: _size.height * 0.42,
             ),
           ],
         ));
