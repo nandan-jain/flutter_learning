@@ -7,7 +7,6 @@ class WelcomeImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var _size = MediaQuery.of(context).size;
-
     return Container(
       height: _size.height * 0.6,
       width: _size.width,
@@ -25,7 +24,7 @@ class WelcomeImage extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: CachedNetworkImage(
                 imageUrl:
-                    'https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/4/16/278d3b27-e719-433e-bc17-ad254429641b1618577529521-1.jpg',
+                    'https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14360884/2021/6/10/04f6b962-fa13-417e-8ee8-320069bfb2721623312059107WomensSwissDotPolySchiffonStraightDressMustardDressSareeBlou1.jpg',
                 placeholder: (context, url) => CircularProgressIndicator(),
                 errorWidget: (context, url, error) => Icon(Icons.error),
               ),
@@ -42,7 +41,7 @@ class WelcomeImage extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: CachedNetworkImage(
                 imageUrl:
-                    'https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1320997/2016/7/19/11468929336885-WROGN-Black-Printed-Slim-Fit-T-shirt-4071468929335948-2.jpg',
+                    'https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15151962/2021/11/8/d00908e5-d6f2-4683-9c9f-1a86713a19da1636350076052-Calvin-Klein-Jeans-Men-Tshirts-9921636350075444-1.jpg',
                 placeholder: (context, url) => CircularProgressIndicator(),
                 errorWidget: (context, url, error) => Icon(Icons.error),
               ),
