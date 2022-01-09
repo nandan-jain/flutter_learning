@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/app_screens/home_screen.dart';
-import 'package:hello_world/base_widgets/main_drawer.dart';
+
+import 'main_drawer.dart';
+import 'tabs/favourites/favourite.dart';
+import 'tabs/feed/main-feed.dart';
+import 'tabs/notifications/notify.dart';
+import 'tabs/profile/profile.dart';
+
 
 class TabLayout extends StatelessWidget {
   const TabLayout({Key? key}) : super(key: key);
@@ -24,7 +29,7 @@ class TabLayout extends StatelessWidget {
           drawer: MainDrawer(),
           body: TabBarView(
             children: [
-              HomePage(),
+              HomeInitial(),
               NotificationPage(),
               ProfilePage(),
               FavouritePage()

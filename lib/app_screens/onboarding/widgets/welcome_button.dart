@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/app_screens/base_screen.dart';
+import 'package:hello_world/app_screens/home/home-page.dart';
 
-class GetStarted extends StatelessWidget {
-  const GetStarted({Key? key}) : super(key: key);
+class WelcomeButton extends StatelessWidget {
+  const WelcomeButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,10 @@ class GetStarted extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Get started',style: TextStyle(
-                  fontSize: _size.width * 0.05
-                ),),
+                Text(
+                  'Get started',
+                  style: TextStyle(fontSize: _size.width * 0.05),
+                ),
                 Icon(
                   Icons.arrow_forward,
                   color: Colors.white,
@@ -29,7 +30,7 @@ class GetStarted extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => HomeState()));
+                  MaterialPageRoute(builder: (context) => TabLayout()));
             },
             style: ElevatedButton.styleFrom(primary: Colors.orange),
           )),

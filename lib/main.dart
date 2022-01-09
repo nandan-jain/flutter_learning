@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'app_screens/base_screen.dart';
+import 'app_screens/onboarding/welcome-page.dart';
 //import 'app_screens/splash_screen.dart';
 
 void main() {
