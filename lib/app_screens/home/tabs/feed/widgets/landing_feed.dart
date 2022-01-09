@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/home_page_comp/product_card.dart';
+import 'package:hello_world/app_screens/home/tabs/feed/widgets/product_card.dart';
 
 class LandingFeed extends StatelessWidget {
   final String sectionLabel;
