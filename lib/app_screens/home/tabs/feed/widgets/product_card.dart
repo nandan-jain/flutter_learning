@@ -98,20 +98,25 @@ class ProductDescription extends StatelessWidget {
 
 class ProductCard extends StatelessWidget {
   final productDetail;
-  const ProductCard({required this.productDetail});
+  final VoidCallback press;
+
+  const ProductCard({required this.productDetail, required this.press});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        ProductImage(productImg: productDetail['img_url']),
-        ProductDescription(
-          productTitle: productDetail['title'],
-          productPrice: productDetail['price'],
-          productRating: productDetail['rating'],
-        )
-      ],
+    return GestureDetector(
+      onTap: press,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ProductImage(productImg: productDetail['img_url']),
+          ProductDescription(
+            productTitle: productDetail['title'],
+            productPrice: productDetail['price'],
+            productRating: productDetail['rating'],
+          )
+        ],
+      ),
     );
   }
 }

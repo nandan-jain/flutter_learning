@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/app_screens/home/action-screens/product-detail/product-detail.dart';
 import 'package:hello_world/app_screens/home/tabs/feed/widgets/product_card.dart';
 
 class LandingFeed extends StatelessWidget {
@@ -45,8 +46,13 @@ class LandingFeed extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return ProductCard(
-                      productDetail: product[index],
-                    );
+                        productDetail: product[index],
+                        press: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetail(
+                                      imageUrl: product[index]['img_url'],
+                                    ))));
                   }),
               height: _size.height * 0.42,
             ),
