@@ -50,8 +50,8 @@ class LandingFeed extends StatelessWidget {
                         press: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ProductDetail(
-                                      imageUrl: product[index]['img_url'],
+                                builder: (context) => ViewProductDetail(
+                                      productDescription: product[index],
                                     ))));
                   }),
               height: _size.height * 0.42,
